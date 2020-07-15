@@ -27,7 +27,7 @@ public class Executor {
         showUsersOverForty(users);
 
         System.out.println("\nUsers age under 50 and from Dnipro:");
-        showUsersUnderFiftyAndLiveInDnipro(users, "Dnepr");
+        showUsersUnderFiftyAndLiveInCity(users, "Dnepr");
 
         System.out.println("\nAverage age in Lvov: " + getAverageAgeOfUsersInCity(users, "Lvov"));
 
@@ -48,7 +48,7 @@ public class Executor {
         System.out.println("\nMin element: " + getMinValue(integerList));
 
         System.out.println("\nValue multiple of number two:");
-        showValueMultiplieOfTwo(integerList);
+        showValueMultipleOfTwo(integerList);
 
         System.out.println("\n\nAll values increased by 10:");
         showValuesIncreasedByTen(integerList);
@@ -80,7 +80,7 @@ public class Executor {
                 .forEach(integer -> System.out.print(integer + " "));
     }
 
-    private static void showValueMultiplieOfTwo(List<Integer> integerList) {
+    private static void showValueMultipleOfTwo(List<Integer> integerList) {
         integerList.stream()
                 .filter(integer -> integer % 2 == 0)
                 .forEach(integer -> System.out.print(integer + " "));
@@ -106,7 +106,7 @@ public class Executor {
                 .count();
     }
 
-    private static void showUsersUnderFiftyAndLiveInDnipro(List<User> users, String city) {
+    private static void showUsersUnderFiftyAndLiveInCity(List<User> users, String city) {
         users.stream()
                 .filter(user -> user.getAge() < 50)
                 .filter(user -> user.getCity().equals(city))
